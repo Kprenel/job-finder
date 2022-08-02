@@ -1,0 +1,28 @@
+{
+  "name": "job-finder",
+  "version": "1.0.0",
+  "description": "Site de empregos para devs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app",
+    "start": "node app"
+  },
+  "keywords": [
+    "dev",
+    "jobs",
+    "dev_jobs",
+    "programing_jobs"
+  ],
+  "author": "Gabriel Jesus",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "sequelize": "^6.21.3",
+    "sqlite3": "^5.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,75 @@
+main {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: var(--padding);
+}
+main h2 {
+	color: var(--font-color);
+	text-align: center;
+	letter-spacing: 2px;
+	padding: calc(var(--padding) * 2) var(--padding);
+	font-size: clamp(1rem, calc(.9rem + 1vw), 1.5rem);
+}
+
+main form {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 10px #ddd;
+	max-width: 450px;
+	margin: 0 auto;
+	border-radius: 8px;
+	padding: 20px;
+}
+main form h3 {
+	text-align: center;
+	font-size: clamp(.7rem, calc(.6rem + 1vw), 1rem);
+	color: red;
+	margin-bottom: calc(var(--margin) * 2);
+}
+
+.inps {
+	display: flex;
+	flex-direction: column;
+	gap: var(--margin);
+}
+.inp-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.inp-group label {
+	color: var(--font-color);
+	font-size: clamp(.7rem, calc(.6rem + 1vw), 1rem);
+}
+.inp-group input, .inp-group textarea {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: calc(var(--padding) / 2);
+	transition: box-shadow .2s;
+}
+.inp-group input:hover, .inp-group textarea:hover {
+	box-shadow: 0 0 0 2px lightblue;
+}
+
+.btns-form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: calc(var(--margin) * 2);
+}
+.btns-form button, .btns-form input {
+	padding: calc(var(--padding) / 2) var(--padding);
+	border-radius: 5px;
+	font-weight: bold;
+}
+.btns-form input {
+	cursor: pointer;
+}
+
+
+
+@media (max-width: 450px) {
+	main form {
+		border-radius: none;
+	}
+}

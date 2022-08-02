@@ -1,0 +1,23 @@
+<main>
+	<a href="/" class="btn-red">Voltar</a>
+
+	<section class="job">
+		<img src="imgs/profile.png">
+		<h2>{{job.dataValues.title}}</h2>
+		<ul>
+			<li>
+				<strong>O que eles estão buscando:</strong>
+				<span>{{job.dataValues.description}}</span>
+			</li>
+
+			<li>
+				<strong>Salário informado é de:</strong>
+				<span>{{job.dataValues.salary}}</span>
+			</li>
+
+			<li>
+				<span>Para trabalhar na <strong>{{job.dataValues.company}}</strong> envie um e-mail para:</span> <a href="mail:to{{job.dataValues.email}}">{{job.dataValues.email}}</a>
+			</li>
+		</ul>
+	</section>
+</main>

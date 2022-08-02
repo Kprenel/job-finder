@@ -1,0 +1,48 @@
+<section class="banner">
+	<div class="banner-cont">
+		<div class="banner-txts">
+			<h2>Encontre o emprego dos seus sonhos</h2>
+			<h3>Somos o site com mais vagas de tecnologia do mercado</h3>
+		</div>
+		<form class="banner-inp" action="/" method="GET">
+			<input type="text" placeholder="Digíte a vaga que está buscando" name="search" required>
+			<button class="btn-red">Enviar</button>
+		</form>
+	</div>
+	<div class="banner-bg"></div>
+</section>
+
+<main>
+
+
+	{{#if search}}
+		{{#if jobs}}
+			<h4>Resultados para: {{search}}</h4>
+		{{else}}
+			<h4>Não há resultados para: {{search}}</h4>
+		{{/if}}
+	{{else}}
+		<h4>Veja as nossas vagas em destaque</h4>
+	{{/if}}
+
+	<section class="jobs-list">
+		<ul>
+			{{#each jobs}}
+			<li class="jobs-list-item {{#if dataValues.new_job}}new-job{{/if}}">
+				<div class="job-item-inf">
+					<img src="imgs/profile.png">
+					<ul>
+						<li>{{dataValues.title}}</li>
+						<li><strong>{{dataValues.company}}</strong></li>
+						<li>{{dataValues.salary}}</li>
+					</ul>
+				</div>
+				<div class="job-item-btns">
+					<button class="new-job-btn">New</button>
+					<a href="/jobs/view/{{dataValues.id}}" class="btn-red view-job-btn">Ver Vaga</a>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+	</section>
+</main>

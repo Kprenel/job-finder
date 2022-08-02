@@ -1,0 +1,42 @@
+<main>
+	<h2>Divulgue a vaga preenchendo o formulário</h2>
+
+	<form action="/jobs/add" method="POST">
+		<h3>Preencha os dados da melhor maneira possível para encontrar mais rápido seu dev!!!</h3>
+
+		<div class="inps">
+			<div class="inp-group">
+				<label for="title">Título:</label>
+				<input type="text" name="title" id="title" placeholder="Título da vaga">
+			</div>
+
+			<div class="inp-group">
+				<label for="company">Nome da empresa:</label>
+				<input type="text" name="company" id="company" placeholder="Dígite o nome da empresa">
+			</div>
+
+			<div class="inp-group">
+				<label for="description">Descrição:</label>
+				<textarea name="description" id="description" placeholder="Descreva as atividades do contratante"></textarea>
+			</div>
+
+			<div class="inp-group">
+				<label for="salary">Salário:</label>
+				<input type="text" name="salary" id="salary" placeholder="Salário do contratante">
+			</div>
+
+			<div class="inp-group">
+				<label for="email">E-mail da empresa:</label>
+				<input type="email" name="email" id="email" placeholder="Email da empresa">
+			</div>
+		</div>
+
+		<div class="btns-form">
+			<button class="btn-red">Enviar</button>
+			<input type="reset" value="Limpar">
+		</div>
+
+		<input type="hidden" name="new_job" value="1">
+	</form>
+</main>
+
